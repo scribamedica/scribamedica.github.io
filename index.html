@@ -190,6 +190,16 @@ details p{color:var(--soft);padding:0 40px 20px 0}
 .cbox b{font-size:20px;overflow-wrap:anywhere}
 .cbox em{font-style:normal;color:var(--hl);font-size:14px;font-weight:600;margin-top:6px}
 footer{padding:24px max(5vw,16px);font-size:14px;color:var(--soft);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;border-top:1px solid var(--line)}
+.ex{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.exc{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.exc:hover{transform:translateY(-6px);box-shadow:0 26px 50px -30px #0b4a5299;border-color:var(--teal2)}
+.exc .pg{display:block;aspect-ratio:210/297;overflow:hidden;border-radius:10px;border:1px solid var(--line);background:#fff;margin-bottom:16px}
+.exc .pg img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.exc small{display:inline-block;font-size:13px;font-weight:700;color:var(--teal2);margin-bottom:6px}
+.exc h3{margin:0 0 6px}
+.exc p{color:var(--soft);margin:0 0 10px}
+.exc em{font-style:normal;font-weight:700;color:var(--red)}
+@media(max-width:960px){.ex{grid-template-columns:minmax(0,1fr);max-width:440px;margin:0 auto}}
 @media(max-width:960px){.top,.en,.who,.head,.extra{grid-template-columns:minmax(0,1fr)}.steps,.pgrid,.cgrid{grid-template-columns:minmax(0,1fr)}.steps::before{display:none}.incl{grid-template-columns:repeat(2,minmax(0,1fr))}.calc{grid-template-columns:minmax(0,1fr)}.nav ul{display:none}}
 @media(max-width:600px){.incl{grid-template-columns:minmax(0,1fr)}.slide{float:none;width:100%;margin:6px 0 10px}.duo{grid-template-columns:minmax(0,1fr)}.badge{font-size:13px;padding:7px 11px}.b1{right:-4px;top:96px}.b2{left:-4px}.b3{right:8px}.sheetbox::before,.sheetbox::after{display:none}.nav .btn{display:none}}
 /* motion */
@@ -234,6 +244,7 @@ footer{padding:24px max(5vw,16px);font-size:14px;color:var(--soft);display:flex;
     <ul>
       <li><a href="#come">Come funziona</a></li>
       <li><a href="#differenza">La differenza</a></li>
+      <li><a href="#esempi">Esempi</a></li>
       <li><a href="#prezzi">Prezzi</a></li>
       <li><a href="#english">English</a></li>
       <li><a href="#faq">Domande</a></li>
@@ -353,6 +364,38 @@ footer{padding:24px max(5vw,16px);font-size:14px;color:var(--soft);display:flex;
         <input type="range" id="slider" min="0" max="100" value="50" aria-label="Confronta il testo senza revisione e con Scriba Medica">
       </div>
       <p class="cmpnote">Esempio illustrativo.</p>
+    </div>
+  </section>
+
+  <section class="band" id="esempi">
+    <div class="wrap">
+      <div class="head rv">
+        <div><span class="kick">Esempi</span><h2>Guarda com'è una sbobina</h2></div>
+        <p>Tre pagine di esempio per vedere l'impaginazione. Le tue saranno impaginate come mi chiedi tu.</p>
+      </div>
+      <div class="ex">
+        <a class="exc rv" href="sito-scriba-medica/esempi/sbobina-filtrazione-glomerulare.pdf" target="_blank" rel="noopener">
+          <span class="pg"><img src="sito-scriba-medica/esempi/sbobina-filtrazione-glomerulare.jpg" alt="Prima pagina della sbobina di esempio sulla filtrazione glomerulare" loading="lazy" width="595" height="842"></span>
+          <small>Italiano · stile semplice</small>
+          <h3>Filtrazione glomerulare</h3>
+          <p>Testo pulito, titoli in grassetto, slide integrate e tabelle.</p>
+          <em>Apri il PDF →</em>
+        </a>
+        <a class="exc rv" href="sito-scriba-medica/esempi/sbobina-heart-failure-EN.pdf" target="_blank" rel="noopener" lang="en">
+          <span class="pg"><img src="sito-scriba-medica/esempi/sbobina-heart-failure-EN.jpg" alt="First page of the sample lecture notes on heart failure" loading="lazy" width="595" height="842"></span>
+          <small>English · simple style</small>
+          <h3>Heart failure</h3>
+          <p>For English-taught medicine courses.</p>
+          <em>Open the PDF →</em>
+        </a>
+        <a class="exc rv" href="sito-scriba-medica/esempi/sbobina-beta-bloccanti-stile-extra.pdf" target="_blank" rel="noopener">
+          <span class="pg"><img src="sito-scriba-medica/esempi/sbobina-beta-bloccanti-stile-extra.jpg" alt="Prima pagina della sbobina di esempio sui beta-bloccanti, stile colorato" loading="lazy" width="595" height="842"></span>
+          <small>Italiano · stile extra a colori</small>
+          <h3>Beta-bloccanti</h3>
+          <p>Schemi e box colorati, comodi per il ripasso.</p>
+          <em>Apri il PDF →</em>
+        </a>
+      </div>
     </div>
   </section>
 
